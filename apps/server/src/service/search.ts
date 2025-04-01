@@ -44,7 +44,7 @@ export const searchWithSearXNG = async (
 
   // Scientific search only supports English, so set to all.
   if (categories?.includes(ESearXNGCategory.SCIENCE)) language = 'all';
-
+  console.log("searchWithSearXNG")
   try {
     const res = await searxng({
       q: query,
@@ -52,6 +52,7 @@ export const searchWithSearXNG = async (
       language,
       engines: engines.join(','),
     });
+    console.log("get res: ", res);
     return res;
   } catch (err) {
     logger.error('[SearXNG Search Error]:', err);

@@ -46,6 +46,7 @@ dist/
 build/
 
 #env
+.env
 .env.local
 
 #logs

@@ -1,0 +1,23 @@
+# version: "3.7"
+# used for local development (rather than docker run)
+services:
+  search:
+    container_name: aisearch
+    image: docker.cnb.cool/aigc/aisearch
+    volumes:
+      - ./.env.docker:/app/.env
+      - ./model.json:/app/dist/model.json
+    ports:
+      - "3000:3000"
+    restart: always
+
+  searxng:
+    container_name: searxng
+    image: docker.io/searxng/searxng:latest
+    restart: always
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - ./searxng:/etc/searxng:rw
+    environment:
+      - SEARXNG_BASE_URL=https://${SEARXNG_HOSTNAME:-localhost}/

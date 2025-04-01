@@ -64,6 +64,8 @@ export class Rag {
 
     // searxng images search
     if (this.engine === 'SEARXNG') {
+      console.log("here")
+      console.log(this.search)
       const res = await this.search(query, [ESearXNGCategory.IMAGES], language);
       const engines = process.env.SEARXNG_IMAGES_ENGINES ? process.env.SEARXNG_IMAGES_ENGINES.split(',') : [];
 
@@ -201,6 +203,7 @@ export class Rag {
       }
     }
 
+    console.log("paramsFormatter: ", prompt)
     const system = util.format(prompt, context);
     const messages: IChatInputMessage[] = [
       {

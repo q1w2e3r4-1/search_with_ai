@@ -41,6 +41,7 @@ export default async function search(params: ISearXNGOptions): Promise<ISearchRe
       }
     });
     const result = await res.json();
+    console.log("get result in search(): ", result);
     if (result.results) {
       return result.results.map((item: any, index: number) => {
         return {
@@ -57,6 +58,7 @@ export default async function search(params: ISearXNGOptions): Promise<ISearchRe
     }
     return [];
   } catch (err) {
+    console.log("get err in search(): ", err);
     return [];
   }
 }
