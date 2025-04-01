@@ -172,7 +172,7 @@ JINA_KEY=#your key
 ```
 
 ## Deploy & Development
-
+* 记得看看How_To_Deploy.md!!!!
 * Node.js >= 20
 * Turborepo
 * PackageManager: yarn@3.5.1
