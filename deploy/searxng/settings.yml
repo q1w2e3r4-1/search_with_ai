@@ -421,7 +421,8 @@ engines:
   - name: bing
     engine: bing
     shortcut: bi
-    disabled: true
+    disabled: false
+    base_url: "https://cn.bing.com/search"
 
   - name: bing images
     engine: bing_images

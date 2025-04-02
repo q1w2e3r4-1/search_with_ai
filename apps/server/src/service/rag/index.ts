@@ -49,8 +49,10 @@ export class Rag {
 
     // Parameters supported by searxng: categories.
     const contexts = await this.search(searchQuery, categories, language);
+    console.log("size of result in search(): ", contexts.length);
     const REFERENCE_COUNT = process.env.REFERENCE_COUNT || 8;
     let limitContexts = contexts.slice(0, +REFERENCE_COUNT);
+    console.log("got limitContexts: ", limitContexts);
 
     if (mode === 'research') {
       const fullContexts = await this.getFullSearchResult(limitContexts);
@@ -64,8 +66,6 @@ export class Rag {
 
     // searxng images search
     if (this.engine === 'SEARXNG') {
-      console.log("here")
-      console.log(this.search)
       const res = await this.search(query, [ESearXNGCategory.IMAGES], language);
       const engines = process.env.SEARXNG_IMAGES_ENGINES ? process.env.SEARXNG_IMAGES_ENGINES.split(',') : [];
 
@@ -78,6 +78,7 @@ export class Rag {
     }
 
     if (!this.stream) {
+      console.log("this.stream = false????")
       const relatedPromise = this.getRelatedQuestions(query, limitContexts);
       const answerPromise = this.getAiAnswer(query, contexts);
       const [related, answer] = await Promise.all([relatedPromise, answerPromise]);
@@ -135,6 +136,7 @@ export class Rag {
     const { model, stream } = this;
     try {
       const { messages } = this.paramsFormatter(query, mode, contexts, 'answer');
+      console.log("messages: ", messages);
       if (!stream) {
         const res = await this.chat({ messages, model });
         return res;
@@ -184,6 +186,7 @@ export class Rag {
     const context = contexts.map(
       (item, index) => `[[citation:${index + 1}]] ${item.content || item.snippet}`
     ).join('\n\n');
+    console.log("contexts are:", contexts);
 
     let prompt = MoreQuestionsPrompt;
 

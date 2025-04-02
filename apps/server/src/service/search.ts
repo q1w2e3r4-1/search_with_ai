@@ -52,7 +52,7 @@ export const searchWithSearXNG = async (
       language,
       engines: engines.join(','),
     });
-    console.log("get res: ", res);
+    // console.log("get res: ", res); // 打印文章(json格式)
     return res;
   } catch (err) {
     logger.error('[SearXNG Search Error]:', err);

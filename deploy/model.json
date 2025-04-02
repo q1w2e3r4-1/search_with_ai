@@ -74,7 +74,7 @@
     "provider": "ollama",
     "type": "openai",
     "baseURL": "http://host.docker.internal:11434/v1",
-    "models": ["llama3.1:8b"]
+    "models": ["llama3.1:8b", "deepseek-r1:1.5b"]
   },
   {
     "provider": "lmstudio",
