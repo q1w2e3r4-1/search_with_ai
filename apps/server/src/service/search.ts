@@ -52,7 +52,7 @@ export const searchWithSearXNG = async (
       language,
       engines: engines.join(','),
     });
-    // console.log("get res: ", res); // 打印文章(json格式)
+    console.log("get res: ", res); // 打印文章(json格式)
     return res;
   } catch (err) {
     logger.error('[SearXNG Search Error]:', err);
@@ -130,6 +130,7 @@ export const searchWithGoogle = async (query: string): Promise<ISearchResponseRe
     });
 
     const result = await res.json();
+    console.log("Google.search -> ", res);
     const list: Record<string, any>[] = result.items ?? [];
 
     const results: ISearchResponseResult[] = list.map(
@@ -193,6 +194,7 @@ export const searchWithTavily = async (query: string): Promise<ISearchResponseRe
       maxResults: +count,
     }
   );
+  console.log("get res(in Tavily): ", results); // 打印文章(json格式)
   return results;
 };
 

@@ -224,6 +224,7 @@ export class DeepResearch {
             queries: z.array(z.string()).describe(`A list of queries to research, maximum of ${numQuestions}`)
           })
         });
+        console.log("!!!!!!!!!!!!!!!!!11111 ", res);
         return res.object.queries.slice(0, numQuestions);
       });
       return res;
@@ -259,6 +260,7 @@ export class DeepResearch {
             })).describe('A list of follow up questions and answers to the research direction')
           })
         });
+        console.log("!!!!!!!!!!!!!!!!!22222 ", res);
         return res.object.questions;
       });
       return res;

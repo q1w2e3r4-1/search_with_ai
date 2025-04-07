@@ -41,7 +41,7 @@ export default async function search(params: ISearXNGOptions): Promise<ISearchRe
       }
     });
     const result = await res.json();
-    console.log("get result in search(): ", result);
+    console.log("get result in search(searxng.ts): ", result);
     if (result.results) {
       return result.results.map((item: any, index: number) => {
         return {

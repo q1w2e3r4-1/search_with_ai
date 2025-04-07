@@ -19,6 +19,7 @@ export async function tavilySearch(query: string, options: TavilySearchOptions) 
     throw new Error('Tavily client not initialized');
   }
   const res = await tvly.search(query, options);
+  console.log("tvly.search -> ", res);
   const results: ISearchResponseResult[] =  res.results.map((item, index) => ({
     id: index + 1,
     name: item.title,

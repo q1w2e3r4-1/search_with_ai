@@ -99,6 +99,7 @@ export class Rag {
     }
 
     await this.getAiAnswer(query, limitContexts, mode, (msg) => {
+      if(msg && msg.content) msg.content = msg.content.replace(/【/g, '[').replace(/】/g, ']');
       onMessage?.(JSON.stringify(msg));
     });
 
@@ -112,6 +113,7 @@ export class Rag {
   private async getFullSearchResult(results: ISearchResponseResult[]) {
     const urls = results.map(item => item.url);
     const fullContexts = await jinaUrlsReader({ urls });
+    console.log("get fullContexts in getFullSearchResult: ", fullContexts);
     return fullContexts;
   }
 
@@ -141,9 +143,14 @@ export class Rag {
         const res = await this.chat({ messages, model });
         return res;
       }
+
+      let fullOutput = '';
       await this.chat({ messages, model }, (msg) => {
         onMessage?.(msg);
+        if(msg && msg.content) msg.content = msg.content.replace(/【/g, '[').replace(/】/g, ']');
+        if(msg) fullOutput += msg.content;
       });
+      console.log("LLM output: ", fullOutput);
     } catch (err: any) {
       console.error('[LLM Error]:', err);
       const msg = {

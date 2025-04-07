@@ -1,0 +1,342 @@
+• Packages in scope: server, web
+• Running dev in 2 packages
+• Remote caching disabled
+cache bypass, force executing b32b54892c9d2397
+web:dev: cache bypass, force executing 26dceb8970bec945
+web:dev: 
+web:dev:   [32m[1mVITE[22m v5.4.15[39m  [2mready in [0m[1m7638[22m[2m[0m ms[22m
+web:dev: 
+web:dev:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+web:dev:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.1.186:[1m5173[22m/[39m
+web:dev:   [32m➜[39m  [1mNetwork[22m: [36mhttp://172.24.240.1:[1m5173[22m/[39m
+[dotenvx@0.24.0] injecting env (28) from .env.local,.env
+[33m[nodemon] 3.1.9[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: ts,json[39m
+[32m[nodemon] starting `ts-node ./src/app.ts`[39m
+{"level":"info","message":"[Server is running on port]: 3000"}
+[whiteListMiddleware] [] 127.0.0.1:3000
+size of result in search():  8
+got limitContexts:  [
+  {
+    id: 1,
+    name: '大模型推理能力的数据基石：运筹学作为llm训练数据的独特价值 - 特工宇宙',
+    url: 'https://www.agent-universe.cn/2025/01/36459.html',
+    snippet: '随着大语言模型的快速发展，推理能力已成为评估模型性能的关键指标之一。推理能力不仅体现在简单的逻辑运算上，更体现在复杂问题的分析、规划和解决过程中。虽然大模型在自然语言理解和生成方面取得了显著进展，但在深层次的推理能力方面仍存在诸多挑战。',
+    rawContent: null,
+    score: 0.79522943,
+    publishedDate: undefined
+  },
+  {
+    id: 2,
+    name: '大模型评测指标汇总 - bonelee - 博客园',
+    url: 'https://www.cnblogs.com/bonelee/p/18152375',
+    snippet: 'RAI（Responsible AI）指标主要用于评价LLM是否是一个负责任的大模型。评价可以促进基于LLM的应用具有公平性、包容性和可靠性。 ... AI2数据集分为两个分区："简单"和"挑战"，其中后一个分区包含需要推理的更困难的问题。大多数问题有4个答案选择，1%的问题',
+    rawContent: null,
+    score: 0.6803909,
+    publishedDate: undefined
+  },
+  {
+    id: 3,
+    name: '评估篇| 大模型评测综述 - 知乎 - 知乎专栏',
+    url: 'https://zhuanlan.zhihu.com/p/20304606028',
+    snippet: '在传统的自然语言任务下，如分类等，经常会用精确率、f1等指标，来评测模型的好坏。随着大模型技术研究的快速发展，以往的指标，对于大模型评估显得过于单薄。如何准确地评估 大语言模型 在不同维度的能力水平，已经成为当前研究的热点问题。为了全面',
+    rawContent: null,
+    score: 0.6010557,
+    publishedDate: undefined
+  },
+  {
+    id: 4,
+    name: '一文详解!大模型性能测试全指标、计算方法及优化指南-csdn博客',
+    url: 'https://blog.csdn.net/l01011_/article/details/145274990',
+    snippet: '一文详解！大模型性能测试全指标、计算方法及优化指南 最近一周，我参与了一些第三方大模型的性能测试，在过程中发现，对于那些对实时性和稳定性要求较高的应用场景，模型的性能指标已经成为衡量其优劣的关键。这些指标不仅直接影响用户体验，还决定了模型能否真正胜任复杂的业务需求。 在近年来大模型技术的快速发展中，我们看到智谱、文心一言、千问、豆包，以及最近备受关注的 DeepSeekV3 等主流模型逐渐涌现。以下，我将从五个核心维度出发，深入解析这些大模型的性能指标及其优化方向。 一、时延指标：决定用户体验的核心因素 时延是衡量模型响应速度的关键维度，直接影响用户的响应速度体验以及交互流畅性。以下是时延指标的具体分类及其影响： 定义：从用户发出请求到返回首个 Token 所需的时间。 影响：首 Token 时延过高会导致用户感受到明显的响应迟滞，特别是在连续对话场景中，影响用户对模型性能的第一印象。 优化建议：通过优化模型初始化和生成过程，可以降低首 Token 时延，显著提升用户的初始反馈体验。 定义：从请求发出到首个完整句子生成的时间。 影响：首句时延较高可能导致用户无法快速获取有效信息，尤其在需要完整回答的场景中，显得尤为重要。 优化建议：使用分段生成和动态加载策略来提升首句生成效率。 定义：两个连续 Token 生成之间的时间间隔。 影响：包间时延过高会导致生成内容断续，影响对话的连贯性和自然度，尤其是在实时语音交互场景中。 优化建议：优化生成策略，使生成过程更加顺畅，模拟连续阅读的自然输出。 定义：完成完整回答所需的时间。 影响：整句时延直接影响用户对模型的整体流畅感知。时延过长会使用户等待时间过长，影响交互体验。 优化建议：利用并行计算和任务分解策略来加快生成速度。 定义：模型每秒生成的 Token 数量，用于评估整体生成效率。 意义：OTPS 越高，模型的输出越流畅，能够在多种场景中提供连贯体验。 二、并发性能与吞吐能力：应对大规模用户的关键 定义：同时处理多个请求的能力。 影响：较高的并发数意味着模型可以同时服务更多用户，是衡量模型扩展能力的重要指标。 优化建议：采用高效的分布式计算和模型优化策略来提升并发能力。 定义：模型每秒能够处理的查询请求数量。 意义：由于大模型响应时长较长，QPS 的实际表现更多取决于模型的并发能力。 三、稳定性：保障高负载场景的用户体验 定义：在 99% 和 95% 的请求中，响应时间的最长值。 意义：TP99 和 TP95 是衡量模型在高负载场景下性能稳定性的重要指标，越低越好，说明系统能稳定地为大多数用户提供快速响应。 优化建议：通过负载均衡和资源调度优化响应时间的尾部性能。 四、生成准确性与质量生成 定义：生成的答案与真实答案的匹配程度。 意义：直接决定用户对模型生成结果的信任度。 优化建议：使用更优质的训练数据，提升模型的理解和生成能力。 定义：输出内容在语义、逻辑和流畅性上的综合表现。 影响：高质量的生成内容能够提升用户体验，避免歧义和错误信息。 优化建议：持续优化模型结构和训练目标。 五、总结与展望 在当今智能化、实时化需求日益增长的背景下，性能和稳定性已成为评价大模型应用能力的核心指标。从响应速度到生成质量，从并发能力到稳定性，这些维度共同构成了大模型的综合性能评估体系。通过持续优化，未来的大模型必将在多样化应用场景中展现更强的灵活性和可靠性。 以下是一个用于计算和记录大模型的首 token 时延、首句时延以及整个输出时延的 Python 脚本。该脚本假设你有一个函数 generate_response 来生成模型的响应，并且你可以测量每个过程的时间。 如何学习大模型 AI ？ 由于新岗位的生产效率，要优于被取代岗位的生产效率，所以实际上整个社会的生产效率是提升的。 但是具体到个人，只能说是： “最先掌握AI的人，将会比较晚掌握AI的人有竞争优势”。 这句话，放在计算机、互联网、移动互联网的开局时期，都是一样的道理。 我在一线互联网企业工作十余年里，指导过不少同行后辈。帮助很多人得到了学习和成长。 我意识到有很多经验和知识值得分享给大家，也可以通过我们的能力和经验解答大家在人工智能学习中的很多困惑，所以在工作繁忙的情况下还是坚持各种整理和分享。但苦于知识传播途径有限，很多互联网行业朋友无法获得正确的资料得到学习提升，故此将并将重要的AI大模型资料包括AI大模型入门学习思维导图、精品AI大模型学习书籍手册、视频教程、实战学习等录播视频免费分享出来。 这份完整版的大模型 AI 学习资料已经上传CSDN，朋友们如果需要可以微信扫描下方CSDN官方认证二维码免费领取【保证100%免费】 第一阶段（10天）：初阶应用 该阶段让大家对大模型 AI有一个最前沿的认识，对大模型 AI 的理解超过 95% 的人，可以在相关讨论时发表高级、不跟风、又接地气的见解，别人只会和 AI 聊天，而你能调教 AI，并能用代码将大模型和业务衔接。 第二阶段（30天）：高阶应用 该阶段我们正式进入大模型 AI 进阶实战学习，学会构造私有知识库，扩展 AI 的能力。快速开发一个完整的基于 agent 对话机器人。掌握功能最强的大模型开发框架，抓住最新的技术进展，适合 Python 和 JavaScript 程序员。 第三阶段（30天）：模型训练 恭喜你，如果学到这里，你基本可以找到一份大模型 AI相关的工作，自己也能训练 GPT 了！通过微调，训练自己的垂直大模型，能独立训练开源多模态大模型，掌握更多技术方案。 对全球大模型从性能、吞吐量、成本等方面有一定的认知，可以在云端和本地等多种环境下部署大模型，找到适合自己的项目/创业方向，做一名被 AI 武装的产品经理。 如果你能在15天内完成所有的任务，那你堪称天才。然而，如果你能完成 60-70% 的内容，你就已经开始具备成为一名大模型 AI 的正确特征了。 DeepSeek R1 & 大数据AI人工智能大模型 走进「DeepSeek R1 & 大数据AI人工智能大模型」技术专栏，探秘科技前沿。深度解析DeepSeek R1架构、性能亮点，结合大数据洞察，揭示其在海量数据处理中的优势。同时，聚焦AI人工智能大模型，分享原理、训练技巧与优化策略。辅以金融、医疗等多领域应用案例，助你掌握技术精髓，把握行业趋势。',
+    rawContent: null,
+    score: 0.5737984,
+    publishedDate: undefined
+  },
+  {
+    id: 5,
+    name: '多模态大模型评测基准MLLM Benchmarks综述 - 知乎 - 知乎专栏',
+    url: 'https://zhuanlan.zhihu.com/p/16894159859',
+    snippet: '多模态大模型评测基准MLLM Benchmarks综述 - 知乎 切换模式 写文章 登录/注册 多模态大模型评测基准MLLM Benchmarks综述 同屿Firmirin​ 中国科学院大学 软件工程硕士在读 本文基于两篇较新的survey，用于介绍视觉多模态大模型领域的benchmarks。 参考： https://arxiv.org/pdf/2409.18142  导读：本文将MLLM的benchmark划分为四大类：理解、推理、生成、应用，分4个章节介绍。每个大类可再细分为若干子类，每个章节先简单介绍子类分类依据，再从任务和评估指标的角度，以及输出格式的角度详细介绍代表性工作。 Understanding：是指从多模态数据中提取和整合特征以执行跨模态分析的能力，包括解释视觉表征、识别关键细节、把握语义以及准确回答相关问题等任务。评估这些功能是基础，因为它们构成了mllm跨各种任务和应用程序的更广泛功能的基础。 Reasoning：超越了基本的理解，包括执行复杂的推理和跨模态得出逻辑结论的能力。这包括需要模型处理和操作信息的任务，使它们能够解决问题并根据跨模态数据做出决策。强大的推理能力对于mlm处理需要更深层次认知处理的复杂任务至关重要。 Generation：涉及基于多模态输入创造新内容，例如从图像生成描述性文本或从文本描述生成视觉内容。这种能力对于创造性、一致性和准确性至关重要的实际应用至关重要 展开阅读全文​ 发布于 2025-01-14 18:55・IP 属地北京 多模态大模型 大模型评测 Benchmark ​赞同 1​​添加评论 ​分享 ​喜欢​收藏​申请转载',
+    rawContent: null,
+    score: 0.53590065,
+    publishedDate: undefined
+  },
+  {
+    id: 6,
+    name: '小白也能看懂 | 大模型的6个评估指标 - Csdn博客',
+    url: 'https://blog.csdn.net/zhishi0000/article/details/138373497',
+    snippet: '然而，模型的规模庞大并不总是意味着性能更好，因此我们需要一套有效的方法来评估这些大型神经网络的性能。本文将探讨为什么要评估大型神经网络模型，以及如何使用一系列关键指标来评估它们。在深度学习领域，大型神经网络模型已经成为各种应用的',
+    rawContent: null,
+    score: 0.51822984,
+    publishedDate: undefined
+  },
+  {
+    id: 7,
+    name: '【大模型理论篇】大模型能力评估、框架工具、评估指标、OpenAI Evals、大模型中文评测示例等_大模型评估-CSDN博客',
+    url: 'https://blog.csdn.net/weixin_65514978/article/details/143191743',
+    snippet: '近年来，大型语言模型（llm）在自然语言处理领域取得了重大进展，例如 gpt-3 和 chat-gpt。这些模型经过大型数据集的训练，在文本相关任务中表现出卓越的能力，甚至超越了人类。本文将简要介绍如何验证 llms 性能的评估指标。自然语言处理（nlp）是人工智能的一个领域，涉及计算机和人类语言',
+    rawContent: null,
+    score: 0.48103997,
+    publishedDate: undefined
+  },
+  {
+    id: 8,
+    name: '一文读懂大语言模型评估：方法、指标与框架全解析 - 知乎',
+    url: 'https://zhuanlan.zhihu.com/p/26098146564',
+    snippet: 'from deepeval.benchmarks import HellaSwag from deepeval.metrics import GEval print(coherence_metric.score) from deepeval.metrics import FaithfulnessMetric from deepeval.metrics import AnswerRelevancyMetric from deepeval.metrics import ContextualPrecisionMetric from deepeval.metrics import ContextualRecallMetric from deepeval.metrics import ContextualRelevancyMetric from deepeval.metrics import HallucinationMetric from deepeval.metrics import ToxicityMetric from deepeval.metrics import GEval from deepeval.metrics import GEval from deepeval.metrics import SummarizationMetric [2]代码: https://github.com/sylinrl/TruthfulQA [3]数据集: https://arxiv.org/abs/2109.07958 [5]代码: https://github.com/hendrycks/test [7]DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs: https://arxiv.org/abs/1903.00161 [9]代码: https://github.com/meetyou-ai-lab/can-mc-evaluate-llms Try ARC, the AI2 Reasoning Challenge: https://arxiv.org/abs/1803.05457 [12]代码: https://github.com/rowanz/hellaswag [13]数据集: https://huggingface.co/datasets/Rowan/hellaswag [15]代码: https://github.com/suzgunmirac/BIG-Bench-Hard [17]WinoGrande: An Adversarial Winograd Schema Challenge at Scale: https://arxiv.org/abs/1907.10641 [18]Training Verifiers to Solve Math Word Problems: https://arxiv.org/abs/2110.14168 [20]代码: https://github.com/openai/human-eval [21]数据集: https://paperswithcode.com/dataset/humaneval [23]代码: https://github.com/microsoft/CodeXGLUE [26]代码: https://github.com/lm-sys/FastChat/blob/main/docs/arena.md [28]代码: https://github.com/lm-sys/FastChat/blob/main/fastchat/llm_judge/README.md [30]Language Model Evaluation Harness: https://github.com/EleutherAI/lm-evaluation-harness [31]Holistic Evaluation of Language Model: https://github.com/stanford-crfm/helm',
+    rawContent: null,
+    score: 0.17464978,
+    publishedDate: undefined
+  }
+]
+contexts are: [
+  {
+    id: 1,
+    name: '大模型推理能力的数据基石：运筹学作为llm训练数据的独特价值 - 特工宇宙',
+    url: 'https://www.agent-universe.cn/2025/01/36459.html',
+    snippet: '随着大语言模型的快速发展，推理能力已成为评估模型性能的关键指标之一。推理能力不仅体现在简单的逻辑运算上，更体现在复杂问题的分析、规划和解决过程中。虽然大模型在自然语言理解和生成方面取得了显著进展，但在深层次的推理能力方面仍存在诸多挑战。',
+    rawContent: null,
+    score: 0.79522943,
+    publishedDate: undefined
+  },
+  {
+    id: 2,
+    name: '大模型评测指标汇总 - bonelee - 博客园',
+    url: 'https://www.cnblogs.com/bonelee/p/18152375',
+    snippet: 'RAI（Responsible AI）指标主要用于评价LLM是否是一个负责任的大模型。评价可以促进基于LLM的应用具有公平性、包容性和可靠性。 ... AI2数据集分为两个分区："简单"和"挑战"，其中后一个分区包含需要推理的更困难的问题。大多数问题有4个答案选择，1%的问题',
+    rawContent: null,
+    score: 0.6803909,
+    publishedDate: undefined
+  },
+  {
+    id: 3,
+    name: '评估篇| 大模型评测综述 - 知乎 - 知乎专栏',
+    url: 'https://zhuanlan.zhihu.com/p/20304606028',
+    snippet: '在传统的自然语言任务下，如分类等，经常会用精确率、f1等指标，来评测模型的好坏。随着大模型技术研究的快速发展，以往的指标，对于大模型评估显得过于单薄。如何准确地评估 大语言模型 在不同维度的能力水平，已经成为当前研究的热点问题。为了全面',
+    rawContent: null,
+    score: 0.6010557,
+    publishedDate: undefined
+  },
+  {
+    id: 4,
+    name: '一文详解!大模型性能测试全指标、计算方法及优化指南-csdn博客',
+    url: 'https://blog.csdn.net/l01011_/article/details/145274990',
+    snippet: '一文详解！大模型性能测试全指标、计算方法及优化指南 最近一周，我参与了一些第三方大模型的性能测试，在过程中发现，对于那些对实时性和稳定性要求较高的应用场景，模型的性能指标已经成为衡量其优劣的关键。这些指标不仅直接影响用户体验，还决定了模型能否真正胜任复杂的业务需求。 在近年来大模型技术的快速发展中，我们看到智谱、文心一言、千问、豆包，以及最近备受关注的 DeepSeekV3 等主流模型逐渐涌现。以下，我将从五个核心维度出发，深入解析这些大模型的性能指标及其优化方向。 一、时延指标：决定用户体验的核心因素 时延是衡量模型响应速度的关键维度，直接影响用户的响应速度体验以及交互流畅性。以下是时延指标的具体分类及其影响： 定义：从用户发出请求到返回首个 Token 所需的时间。 影响：首 Token 时延过高会导致用户感受到明显的响应迟滞，特别是在连续对话场景中，影响用户对模型性能的第一印象。 优化建议：通过优化模型初始化和生成过程，可以降低首 Token 时延，显著提升用户的初始反馈体验。 定义：从请求发出到首个完整句子生成的时间。 影响：首句时延较高可能导致用户无法快速获取有效信息，尤其在需要完整回答的场景中，显得尤为重要。 优化建议：使用分段生成和动态加载策略来提升首句生成效率。 定义：两个连续 Token 生成之间的时间间隔。 影响：包间时延过高会导致生成内容断续，影响对话的连贯性和自然度，尤其是在实时语音交互场景中。 优化建议：优化生成策略，使生成过程更加顺畅，模拟连续阅读的自然输出。 定义：完成完整回答所需的时间。 影响：整句时延直接影响用户对模型的整体流畅感知。时延过长会使用户等待时间过长，影响交互体验。 优化建议：利用并行计算和任务分解策略来加快生成速度。 定义：模型每秒生成的 Token 数量，用于评估整体生成效率。 意义：OTPS 越高，模型的输出越流畅，能够在多种场景中提供连贯体验。 二、并发性能与吞吐能力：应对大规模用户的关键 定义：同时处理多个请求的能力。 影响：较高的并发数意味着模型可以同时服务更多用户，是衡量模型扩展能力的重要指标。 优化建议：采用高效的分布式计算和模型优化策略来提升并发能力。 定义：模型每秒能够处理的查询请求数量。 意义：由于大模型响应时长较长，QPS 的实际表现更多取决于模型的并发能力。 三、稳定性：保障高负载场景的用户体验 定义：在 99% 和 95% 的请求中，响应时间的最长值。 意义：TP99 和 TP95 是衡量模型在高负载场景下性能稳定性的重要指标，越低越好，说明系统能稳定地为大多数用户提供快速响应。 优化建议：通过负载均衡和资源调度优化响应时间的尾部性能。 四、生成准确性与质量生成 定义：生成的答案与真实答案的匹配程度。 意义：直接决定用户对模型生成结果的信任度。 优化建议：使用更优质的训练数据，提升模型的理解和生成能力。 定义：输出内容在语义、逻辑和流畅性上的综合表现。 影响：高质量的生成内容能够提升用户体验，避免歧义和错误信息。 优化建议：持续优化模型结构和训练目标。 五、总结与展望 在当今智能化、实时化需求日益增长的背景下，性能和稳定性已成为评价大模型应用能力的核心指标。从响应速度到生成质量，从并发能力到稳定性，这些维度共同构成了大模型的综合性能评估体系。通过持续优化，未来的大模型必将在多样化应用场景中展现更强的灵活性和可靠性。 以下是一个用于计算和记录大模型的首 token 时延、首句时延以及整个输出时延的 Python 脚本。该脚本假设你有一个函数 generate_response 来生成模型的响应，并且你可以测量每个过程的时间。 如何学习大模型 AI ？ 由于新岗位的生产效率，要优于被取代岗位的生产效率，所以实际上整个社会的生产效率是提升的。 但是具体到个人，只能说是： “最先掌握AI的人，将会比较晚掌握AI的人有竞争优势”。 这句话，放在计算机、互联网、移动互联网的开局时期，都是一样的道理。 我在一线互联网企业工作十余年里，指导过不少同行后辈。帮助很多人得到了学习和成长。 我意识到有很多经验和知识值得分享给大家，也可以通过我们的能力和经验解答大家在人工智能学习中的很多困惑，所以在工作繁忙的情况下还是坚持各种整理和分享。但苦于知识传播途径有限，很多互联网行业朋友无法获得正确的资料得到学习提升，故此将并将重要的AI大模型资料包括AI大模型入门学习思维导图、精品AI大模型学习书籍手册、视频教程、实战学习等录播视频免费分享出来。 这份完整版的大模型 AI 学习资料已经上传CSDN，朋友们如果需要可以微信扫描下方CSDN官方认证二维码免费领取【保证100%免费】 第一阶段（10天）：初阶应用 该阶段让大家对大模型 AI有一个最前沿的认识，对大模型 AI 的理解超过 95% 的人，可以在相关讨论时发表高级、不跟风、又接地气的见解，别人只会和 AI 聊天，而你能调教 AI，并能用代码将大模型和业务衔接。 第二阶段（30天）：高阶应用 该阶段我们正式进入大模型 AI 进阶实战学习，学会构造私有知识库，扩展 AI 的能力。快速开发一个完整的基于 agent 对话机器人。掌握功能最强的大模型开发框架，抓住最新的技术进展，适合 Python 和 JavaScript 程序员。 第三阶段（30天）：模型训练 恭喜你，如果学到这里，你基本可以找到一份大模型 AI相关的工作，自己也能训练 GPT 了！通过微调，训练自己的垂直大模型，能独立训练开源多模态大模型，掌握更多技术方案。 对全球大模型从性能、吞吐量、成本等方面有一定的认知，可以在云端和本地等多种环境下部署大模型，找到适合自己的项目/创业方向，做一名被 AI 武装的产品经理。 如果你能在15天内完成所有的任务，那你堪称天才。然而，如果你能完成 60-70% 的内容，你就已经开始具备成为一名大模型 AI 的正确特征了。 DeepSeek R1 & 大数据AI人工智能大模型 走进「DeepSeek R1 & 大数据AI人工智能大模型」技术专栏，探秘科技前沿。深度解析DeepSeek R1架构、性能亮点，结合大数据洞察，揭示其在海量数据处理中的优势。同时，聚焦AI人工智能大模型，分享原理、训练技巧与优化策略。辅以金融、医疗等多领域应用案例，助你掌握技术精髓，把握行业趋势。',
+    rawContent: null,
+    score: 0.5737984,
+    publishedDate: undefined
+  },
+  {
+    id: 5,
+    name: '多模态大模型评测基准MLLM Benchmarks综述 - 知乎 - 知乎专栏',
+    url: 'https://zhuanlan.zhihu.com/p/16894159859',
+    snippet: '多模态大模型评测基准MLLM Benchmarks综述 - 知乎 切换模式 写文章 登录/注册 多模态大模型评测基准MLLM Benchmarks综述 同屿Firmirin​ 中国科学院大学 软件工程硕士在读 本文基于两篇较新的survey，用于介绍视觉多模态大模型领域的benchmarks。 参考： https://arxiv.org/pdf/2409.18142  导读：本文将MLLM的benchmark划分为四大类：理解、推理、生成、应用，分4个章节介绍。每个大类可再细分为若干子类，每个章节先简单介绍子类分类依据，再从任务和评估指标的角度，以及输出格式的角度详细介绍代表性工作。 Understanding：是指从多模态数据中提取和整合特征以执行跨模态分析的能力，包括解释视觉表征、识别关键细节、把握语义以及准确回答相关问题等任务。评估这些功能是基础，因为它们构成了mllm跨各种任务和应用程序的更广泛功能的基础。 Reasoning：超越了基本的理解，包括执行复杂的推理和跨模态得出逻辑结论的能力。这包括需要模型处理和操作信息的任务，使它们能够解决问题并根据跨模态数据做出决策。强大的推理能力对于mlm处理需要更深层次认知处理的复杂任务至关重要。 Generation：涉及基于多模态输入创造新内容，例如从图像生成描述性文本或从文本描述生成视觉内容。这种能力对于创造性、一致性和准确性至关重要的实际应用至关重要 展开阅读全文​ 发布于 2025-01-14 18:55・IP 属地北京 多模态大模型 大模型评测 Benchmark ​赞同 1​​添加评论 ​分享 ​喜欢​收藏​申请转载',
+    rawContent: null,
+    score: 0.53590065,
+    publishedDate: undefined
+  },
+  {
+    id: 6,
+    name: '小白也能看懂 | 大模型的6个评估指标 - Csdn博客',
+    url: 'https://blog.csdn.net/zhishi0000/article/details/138373497',
+    snippet: '然而，模型的规模庞大并不总是意味着性能更好，因此我们需要一套有效的方法来评估这些大型神经网络的性能。本文将探讨为什么要评估大型神经网络模型，以及如何使用一系列关键指标来评估它们。在深度学习领域，大型神经网络模型已经成为各种应用的',
+    rawContent: null,
+    score: 0.51822984,
+    publishedDate: undefined
+  },
+  {
+    id: 7,
+    name: '【大模型理论篇】大模型能力评估、框架工具、评估指标、OpenAI Evals、大模型中文评测示例等_大模型评估-CSDN博客',
+    url: 'https://blog.csdn.net/weixin_65514978/article/details/143191743',
+    snippet: '近年来，大型语言模型（llm）在自然语言处理领域取得了重大进展，例如 gpt-3 和 chat-gpt。这些模型经过大型数据集的训练，在文本相关任务中表现出卓越的能力，甚至超越了人类。本文将简要介绍如何验证 llms 性能的评估指标。自然语言处理（nlp）是人工智能的一个领域，涉及计算机和人类语言',
+    rawContent: null,
+    score: 0.48103997,
+    publishedDate: undefined
+  },
+  {
+    id: 8,
+    name: '一文读懂大语言模型评估：方法、指标与框架全解析 - 知乎',
+    url: 'https://zhuanlan.zhihu.com/p/26098146564',
+    snippet: 'from deepeval.benchmarks import HellaSwag from deepeval.metrics import GEval print(coherence_metric.score) from deepeval.metrics import FaithfulnessMetric from deepeval.metrics import AnswerRelevancyMetric from deepeval.metrics import ContextualPrecisionMetric from deepeval.metrics import ContextualRecallMetric from deepeval.metrics import ContextualRelevancyMetric from deepeval.metrics import HallucinationMetric from deepeval.metrics import ToxicityMetric from deepeval.metrics import GEval from deepeval.metrics import GEval from deepeval.metrics import SummarizationMetric [2]代码: https://github.com/sylinrl/TruthfulQA [3]数据集: https://arxiv.org/abs/2109.07958 [5]代码: https://github.com/hendrycks/test [7]DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs: https://arxiv.org/abs/1903.00161 [9]代码: https://github.com/meetyou-ai-lab/can-mc-evaluate-llms Try ARC, the AI2 Reasoning Challenge: https://arxiv.org/abs/1803.05457 [12]代码: https://github.com/rowanz/hellaswag [13]数据集: https://huggingface.co/datasets/Rowan/hellaswag [15]代码: https://github.com/suzgunmirac/BIG-Bench-Hard [17]WinoGrande: An Adversarial Winograd Schema Challenge at Scale: https://arxiv.org/abs/1907.10641 [18]Training Verifiers to Solve Math Word Problems: https://arxiv.org/abs/2110.14168 [20]代码: https://github.com/openai/human-eval [21]数据集: https://paperswithcode.com/dataset/humaneval [23]代码: https://github.com/microsoft/CodeXGLUE [26]代码: https://github.com/lm-sys/FastChat/blob/main/docs/arena.md [28]代码: https://github.com/lm-sys/FastChat/blob/main/fastchat/llm_judge/README.md [30]Language Model Evaluation Harness: https://github.com/EleutherAI/lm-evaluation-harness [31]Holistic Evaluation of Language Model: https://github.com/stanford-crfm/helm',
+    rawContent: null,
+    score: 0.17464978,
+    publishedDate: undefined
+  }
+]
+paramsFormatter:  
+You are a large language AI assistant built by iSOU AI Search. You are given a user question, and please write clean, concise and accurate answer to the question. You will be given a set of related contexts to the question, each starting with a reference number like [[citation:x]], where x is a number. Please use the context and cite the context at the end of each sentence if applicable.
+
+Your answer must be correct, accurate and written by an expert using an unbiased and professional tone. Please limit to 1024 tokens. Do not give any information that is not related to the question, and do not repeat. Say "information is missing on" followed by the related topic, if the given context do not provide sufficient information.
+
+Please cite the contexts with the reference numbers, in the format [[citation:x]]. If a sentence comes from multiple contexts, please list all applicable citations, like [[citation:3]][[citation:5]]. Other than code and specific names and citations.
+
+NEVER write URLs or links. Here are the set of contexts:
+
+%s
+
+Remember, don't blindly repeat the contexts verbatim. Your answer must be written in the same language as the user question, For example, if the user question is written in chinese, your answer should be written in chinese too, if user's question is written in english, your answer should be written in english too.
+
+Today's date is 2025-04-07T01:56:19.225Z, And here is the user question:
+
+messages:  [
+  {
+    role: 'user',
+    content: '\n' +
+      'You are a large language AI assistant built by iSOU AI Search. You are given a user question, and please write clean, concise and accurate answer to the question. You will be given a set of related contexts to the question, each starting with a reference number like [[citation:x]], where x is a number. Please use the context and cite the context at the end of each sentence if applicable.\n' +
+      '\n' +
+      'Your answer must be correct, accurate and written by an expert using an unbiased and professional tone. Please limit to 1024 tokens. Do not give any information that is not related to the question, and do not repeat. Say "information is missing on" followed by the related topic, if the given context do not provide sufficient information.\n' +
+      '\n' +
+      'Please cite the contexts with the reference numbers, in the format [[citation:x]]. If a sentence comes from multiple contexts, please list all applicable citations, like [[citation:3]][[citation:5]]. Other than code and specific names and citations.\n' +
+      '\n' +
+      'NEVER write URLs or links. Here are the set of contexts:\n' +
+      '\n' +
+      '[[citation:1]] 随着大语言模型的快速发展，推理能力已成为评估模型性能的关键指标之一。推理能力不仅体现在简单的逻辑运算上，更体现在复杂问题的分析、规划和解决过程中。虽然大模型在自然语言理解和生成方面取得了显著进展，但在深层次的推理能力方面仍存在诸多挑战。\n' +
+      '\n' +
+      '[[citation:2]] RAI（Responsible AI）指标主要用于评价LLM是否是一个负责任的大模型。评价可以促进基于LLM的应用具有公平性、包容性和可靠性。 ... AI2数据集分为两个分区："简单"和"挑战"，其中后一个分区包含需要推理的更困难的问题。大多数问题有4个答案选择，1%的问题\n' +
+      '\n' +
+      '[[citation:3]] 在传统的自然语言任务下，如分类等，经常会用精确率、f1等指标，来评测模型的好坏。随着大模型技术研究的快速发展，以往的指标，对于大模型评估显得过于单薄。如何准确地评估 大语言模型 在不同维度的能力水平，已经成为当前研究的热点问题。为了全面\n' +
+      '\n' +
+      '[[citation:4]] 一文详解！大模型性能测试全指标、计算方法及优化指南 最近一周，我参与了一些第三方大模型的性能测试，在过程中发现，对于那些对实时性和稳定性要求较高的应用场景，模型的性能指标已经成为衡量其优劣的关键。这些指标不仅直接影响用户体验，还决定了模型能否真正胜任复杂的业务需求。 在近年来大模型技术的快速发展中，我们看到智谱、文心一言、千问、豆包，以及最近备受关注的 DeepSeekV3 等主流模型逐渐涌现。以下，我将从五个核心维度出发，深入解析这些大模型的性能指标及其优化方向。 一、时延指标：决定用户体验的核心因素 时延是衡量模型响应速度的关键维度，直接影响用户的响应速度体验以及交互流畅性。以下是时延指标的具体分类及其影响： 定义：从用户发出请求到返回首个 Token 所需的时间。 影响：首 Token 时延过高会导致用户感受到明显的响应迟滞，特别是在连续对话场景中，影响用户对模型性能的第一印象。 优化建议：通过优化模型初始化和生成过程，可以降低首 Token 时延，显著提升用户的初始反馈体验。 定义：从请求发出到首个完整句子生成的时间。 影响：首句时延较高可能导致用户无法快速获取有效信息，尤其在需要完整回答的场景中，显得尤为重要。 优化建议：使用分段生成和动态加载策略来提升首句生成效率。 定义：两个连续 Token 生成之间的时间间隔。 影响：包间时延过高会导致生成内容断续，影响对话的连贯性和自然度，尤其是在实时语音交互场景中。 优化建议：优化生成策略，使生成过程更加顺畅，模拟连续阅读的自然输出。 定义：完成完整回答所需的时间。 影响：整句时延直接影响用户对模型的整体流畅感知。时延过长会使用户等待时间过长，影响交互体验。 优化建议：利用并行计算和任务分解策略来加快生成速度。 定义：模型每秒生成的 Token 数量，用于评估整体生成效率。 意义：OTPS 越高，模型的输出越流畅，能够在多种场景中提供连贯体验。 二、并发性能与吞吐能力：应对大规模用户的关键 定义：同时处理多个请求的能力。 影响：较高的并发数意味着模型可以同时服务更多用户，是衡量模型扩展能力的重要指标。 优化建议：采用高效的分布式计算和模型优化策略来提升并发能力。 定义：模型每秒能够处理的查询请求数量。 意义：由于大模型响应时长较长，QPS 的实际表现更多取决于模型的并发能力。 三、稳定性：保障高负载场景的用户体验 定义：在 99% 和 95% 的请求中，响应时间的最长值。 意义：TP99 和 TP95 是衡量模型在高负载场景下性能稳定性的重要指标，越低越好，说明系统能稳定地为大多数用户提供快速响应。 优化建议：通过负载均衡和资源调度优化响应时间的尾部性能。 四、生成准确性与质量生成 定义：生成的答案与真实答案的匹配程度。 意义：直接决定用户对模型生成结果的信任度。 优化建议：使用更优质的训练数据，提升模型的理解和生成能力。 定义：输出内容在语义、逻辑和流畅性上的综合表现。 影响：高质量的生成内容能够提升用户体验，避免歧义和错误信息。 优化建议：持续优化模型结构和训练目标。 五、总结与展望 在当今智能化、实时化需求日益增长的背景下，性能和稳定性已成为评价大模型应用能力的核心指标。从响应速度到生成质量，从并发能力到稳定性，这些维度共同构成了大模型的综合性能评估体系。通过持续优化，未来的大模型必将在多样化应用场景中展现更强的灵活性和可靠性。 以下是一个用于计算和记录大模型的首 token 时延、首句时延以及整个输出时延的 Python 脚本。该脚本假设你有一个函数 generate_response 来生成模型的响应，并且你可以测量每个过程的时间。 如何学习大模型 AI ？ 由于新岗位的生产效率，要优于被取代岗位的生产效率，所以实际上整个社会的生产效率是提升的。 但是具体到个人，只能说是： “最先掌握AI的人，将会比较晚掌握AI的人有竞争优势”。 这句话，放在计算机、互联网、移动互联网的开局时期，都是一样的道理。 我在一线互联网企业工作十余年里，指导过不少同行后辈。帮助很多人得到了学习和成长。 我意识到有很多经验和知识值得分享给大家，也可以通过我们的能力和经验解答大家在人工智能学习中的很多困惑，所以在工作繁忙的情况下还是坚持各种整理和分享。但苦于知识传播途径有限，很多互联网行业朋友无法获得正确的资料得到学习提升，故此将并将重要的AI大模型资料包括AI大模型入门学习思维导图、精品AI大模型学习书籍手册、视频教程、实战学习等录播视频免费分享出来。 这份完整版的大模型 AI 学习资料已经上传CSDN，朋友们如果需要可以微信扫描下方CSDN官方认证二维码免费领取【保证100%免费】 第一阶段（10天）：初阶应用 该阶段让大家对大模型 AI有一个最前沿的认识，对大模型 AI 的理解超过 95% 的人，可以在相关讨论时发表高级、不跟风、又接地气的见解，别人只会和 AI 聊天，而你能调教 AI，并能用代码将大模型和业务衔接。 第二阶段（30天）：高阶应用 该阶段我们正式进入大模型 AI 进阶实战学习，学会构造私有知识库，扩展 AI 的能力。快速开发一个完整的基于 agent 对话机器人。掌握功能最强的大模型开发框架，抓住最新的技术进展，适合 Python 和 JavaScript 程序员。 第三阶段（30天）：模型训练 恭喜你，如果学到这里，你基本可以找到一份大模型 AI相关的工作，自己也能训练 GPT 了！通过微调，训练自己的垂直大模型，能独立训练开源多模态大模型，掌握更多技术方案。 对全球大模型从性能、吞吐量、成本等方面有一定的认知，可以在云端和本地等多种环境下部署大模型，找到适合自己的项目/创业方向，做一名被 AI 武装的产品经理。 如果你能在15天内完成所有的任务，那你堪称天才。然而，如果你能完成 60-70% 的内容，你就已经开始具备成为一名大模型 AI 的正确特征了。 DeepSeek R1 & 大数据AI人工智能大模型 走进「DeepSeek R1 & 大数据AI人工智能大模型」技术专栏，探秘科技前沿。深度解析DeepSeek R1架构、性能亮点，结合大数据洞察，揭示其在海量数据处理中的优势。同时，聚焦AI人工智能大模型，分享原理、训练技巧与优化策略。辅以金融、医疗等多领域应用案例，助你掌握技术精髓，把握行业趋势。\n' +
+      '\n' +
+      '[[citation:5]] 多模态大模型评测基准MLLM Benchmarks综述 - 知乎 切换模式 写文章 登录/注册 多模态大模型评测基准MLLM Benchmarks综述 同屿Firmirin​ 中国科学院大学 软件工程硕士在读 本文基于两篇较新的survey，用于介绍视觉多模态大模型领域的benchmarks。 参考： https://arxiv.org/pdf/2409.18142  导读：本文将MLLM的benchmark划分为四大类：理解、推理、生成、应用，分4个章节介绍。每个大类可再细分为若干子类，每个章节先简单介绍子类分类依据，再从任务和评估指标的角度，以及输出格式的角度详细介绍代表性工作。 Understanding：是指从多模态数据中提取和整合特征以执行跨模态分析的能力，包括解释视觉表征、识别关键细节、把握语义以及准确回答相关问题等任务。评估这些功能是基础，因为它们构成了mllm跨各种任务和应用程序的更广泛功能的基础。 Reasoning：超越了基本的理解，包括执行复杂的推理和跨模态得出逻辑结论的能力。这包括需要模型处理和操作信息的任务，使它们能够解决问题并根据跨模态数据做出决策。强大的推理能力对于mlm处理需要更深层次认知处理的复杂任务至关重要。 Generation：涉及基于多模态输入创造新内容，例如从图像生成描述性文本或从文本描述生成视觉内容。这种能力对于创造性、一致性和准确性至关重要的实际应用至关重要 展开阅读全文​ 发布于 2025-01-14 18:55・IP 属地北京 多模态大模型 大模型评测 Benchmark ​赞同 1​​添加评论 ​分享 ​喜欢​收藏​申请转载\n' +
+      '\n' +
+      '[[citation:6]] 然而，模型的规模庞大并不总是意味着性能更好，因此我们需要一套有效的方法来评估这些大型神经网络的性能。本文将探讨为什么要评估大型神经网络模型，以及如何使用一系列关键指标来评估它们。在深度学习领域，大型神经网络模型已经成为各种应用的\n' +
+      '\n' +
+      '[[citation:7]] 近年来，大型语言模型（llm）在自然语言处理领域取得了重大进展，例如 gpt-3 和 chat-gpt。这些模型经过大型数据集的训练，在文本相关任务中表现出卓越的能力，甚至超越了人类。本文将简要介绍如何验证 llms 性能的评估指标。自然语言处理（nlp）是人工智能的一个领域，涉及计算机和人类语言\n' +
+      '\n' +
+      '[[citation:8]] from deepeval.benchmarks import HellaSwag from deepeval.metrics import GEval print(coherence_metric.score) from deepeval.metrics import FaithfulnessMetric from deepeval.metrics import AnswerRelevancyMetric from deepeval.metrics import ContextualPrecisionMetric from deepeval.metrics import ContextualRecallMetric from deepeval.metrics import ContextualRelevancyMetric from deepeval.metrics import HallucinationMetric from deepeval.metrics import ToxicityMetric from deepeval.metrics import GEval from deepeval.metrics import GEval from deepeval.metrics import SummarizationMetric [2]代码: https://github.com/sylinrl/TruthfulQA [3]数据集: https://arxiv.org/abs/2109.07958 [5]代码: https://github.com/hendrycks/test [7]DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs: https://arxiv.org/abs/1903.00161 [9]代码: https://github.com/meetyou-ai-lab/can-mc-evaluate-llms Try ARC, the AI2 Reasoning Challenge: https://arxiv.org/abs/1803.05457 [12]代码: https://github.com/rowanz/hellaswag [13]数据集: https://huggingface.co/datasets/Rowan/hellaswag [15]代码: https://github.com/suzgunmirac/BIG-Bench-Hard [17]WinoGrande: An Adversarial Winograd Schema Challenge at Scale: https://arxiv.org/abs/1907.10641 [18]Training Verifiers to Solve Math Word Problems: https://arxiv.org/abs/2110.14168 [20]代码: https://github.com/openai/human-eval [21]数据集: https://paperswithcode.com/dataset/humaneval [23]代码: https://github.com/microsoft/CodeXGLUE [26]代码: https://github.com/lm-sys/FastChat/blob/main/docs/arena.md [28]代码: https://github.com/lm-sys/FastChat/blob/main/fastchat/llm_judge/README.md [30]Language Model Evaluation Harness: https://github.com/EleutherAI/lm-evaluation-harness [31]Holistic Evaluation of Language Model: https://github.com/stanford-crfm/helm\n' +
+      '\n' +
+      "Remember, don't blindly repeat the contexts verbatim. Your answer must be written in the same language as the user question, For example, if the user question is written in chinese, your answer should be written in chinese too, if user's question is written in english, your answer should be written in english too.\n" +
+      '\n' +
+      "Today's date is 2025-04-07T01:56:19.225Z, And here is the user question:\n" +
+      ' 如何评价一个大模型的推理性能？'
+  }
+]
+contexts are: [
+  {
+    id: 1,
+    name: '大模型推理能力的数据基石：运筹学作为llm训练数据的独特价值 - 特工宇宙',
+    url: 'https://www.agent-universe.cn/2025/01/36459.html',
+    snippet: '随着大语言模型的快速发展，推理能力已成为评估模型性能的关键指标之一。推理能力不仅体现在简单的逻辑运算上，更体现在复杂问题的分析、规划和解决过程中。虽然大模型在自然语言理解和生成方面取得了显著进展，但在深层次的推理能力方面仍存在诸多挑战。',
+    rawContent: null,
+    score: 0.79522943,
+    publishedDate: undefined
+  },
+  {
+    id: 2,
+    name: '大模型评测指标汇总 - bonelee - 博客园',
+    url: 'https://www.cnblogs.com/bonelee/p/18152375',
+    snippet: 'RAI（Responsible AI）指标主要用于评价LLM是否是一个负责任的大模型。评价可以促进基于LLM的应用具有公平性、包容性和可靠性。 ... AI2数据集分为两个分区："简单"和"挑战"，其中后一个分区包含需要推理的更困难的问题。大多数问题有4个答案选择，1%的问题',
+    rawContent: null,
+    score: 0.6803909,
+    publishedDate: undefined
+  },
+  {
+    id: 3,
+    name: '评估篇| 大模型评测综述 - 知乎 - 知乎专栏',
+    url: 'https://zhuanlan.zhihu.com/p/20304606028',
+    snippet: '在传统的自然语言任务下，如分类等，经常会用精确率、f1等指标，来评测模型的好坏。随着大模型技术研究的快速发展，以往的指标，对于大模型评估显得过于单薄。如何准确地评估 大语言模型 在不同维度的能力水平，已经成为当前研究的热点问题。为了全面',
+    rawContent: null,
+    score: 0.6010557,
+    publishedDate: undefined
+  },
+  {
+    id: 4,
+    name: '一文详解!大模型性能测试全指标、计算方法及优化指南-csdn博客',
+    url: 'https://blog.csdn.net/l01011_/article/details/145274990',
+    snippet: '一文详解！大模型性能测试全指标、计算方法及优化指南 最近一周，我参与了一些第三方大模型的性能测试，在过程中发现，对于那些对实时性和稳定性要求较高的应用场景，模型的性能指标已经成为衡量其优劣的关键。这些指标不仅直接影响用户体验，还决定了模型能否真正胜任复杂的业务需求。 在近年来大模型技术的快速发展中，我们看到智谱、文心一言、千问、豆包，以及最近备受关注的 DeepSeekV3 等主流模型逐渐涌现。以下，我将从五个核心维度出发，深入解析这些大模型的性能指标及其优化方向。 一、时延指标：决定用户体验的核心因素 时延是衡量模型响应速度的关键维度，直接影响用户的响应速度体验以及交互流畅性。以下是时延指标的具体分类及其影响： 定义：从用户发出请求到返回首个 Token 所需的时间。 影响：首 Token 时延过高会导致用户感受到明显的响应迟滞，特别是在连续对话场景中，影响用户对模型性能的第一印象。 优化建议：通过优化模型初始化和生成过程，可以降低首 Token 时延，显著提升用户的初始反馈体验。 定义：从请求发出到首个完整句子生成的时间。 影响：首句时延较高可能导致用户无法快速获取有效信息，尤其在需要完整回答的场景中，显得尤为重要。 优化建议：使用分段生成和动态加载策略来提升首句生成效率。 定义：两个连续 Token 生成之间的时间间隔。 影响：包间时延过高会导致生成内容断续，影响对话的连贯性和自然度，尤其是在实时语音交互场景中。 优化建议：优化生成策略，使生成过程更加顺畅，模拟连续阅读的自然输出。 定义：完成完整回答所需的时间。 影响：整句时延直接影响用户对模型的整体流畅感知。时延过长会使用户等待时间过长，影响交互体验。 优化建议：利用并行计算和任务分解策略来加快生成速度。 定义：模型每秒生成的 Token 数量，用于评估整体生成效率。 意义：OTPS 越高，模型的输出越流畅，能够在多种场景中提供连贯体验。 二、并发性能与吞吐能力：应对大规模用户的关键 定义：同时处理多个请求的能力。 影响：较高的并发数意味着模型可以同时服务更多用户，是衡量模型扩展能力的重要指标。 优化建议：采用高效的分布式计算和模型优化策略来提升并发能力。 定义：模型每秒能够处理的查询请求数量。 意义：由于大模型响应时长较长，QPS 的实际表现更多取决于模型的并发能力。 三、稳定性：保障高负载场景的用户体验 定义：在 99% 和 95% 的请求中，响应时间的最长值。 意义：TP99 和 TP95 是衡量模型在高负载场景下性能稳定性的重要指标，越低越好，说明系统能稳定地为大多数用户提供快速响应。 优化建议：通过负载均衡和资源调度优化响应时间的尾部性能。 四、生成准确性与质量生成 定义：生成的答案与真实答案的匹配程度。 意义：直接决定用户对模型生成结果的信任度。 优化建议：使用更优质的训练数据，提升模型的理解和生成能力。 定义：输出内容在语义、逻辑和流畅性上的综合表现。 影响：高质量的生成内容能够提升用户体验，避免歧义和错误信息。 优化建议：持续优化模型结构和训练目标。 五、总结与展望 在当今智能化、实时化需求日益增长的背景下，性能和稳定性已成为评价大模型应用能力的核心指标。从响应速度到生成质量，从并发能力到稳定性，这些维度共同构成了大模型的综合性能评估体系。通过持续优化，未来的大模型必将在多样化应用场景中展现更强的灵活性和可靠性。 以下是一个用于计算和记录大模型的首 token 时延、首句时延以及整个输出时延的 Python 脚本。该脚本假设你有一个函数 generate_response 来生成模型的响应，并且你可以测量每个过程的时间。 如何学习大模型 AI ？ 由于新岗位的生产效率，要优于被取代岗位的生产效率，所以实际上整个社会的生产效率是提升的。 但是具体到个人，只能说是： “最先掌握AI的人，将会比较晚掌握AI的人有竞争优势”。 这句话，放在计算机、互联网、移动互联网的开局时期，都是一样的道理。 我在一线互联网企业工作十余年里，指导过不少同行后辈。帮助很多人得到了学习和成长。 我意识到有很多经验和知识值得分享给大家，也可以通过我们的能力和经验解答大家在人工智能学习中的很多困惑，所以在工作繁忙的情况下还是坚持各种整理和分享。但苦于知识传播途径有限，很多互联网行业朋友无法获得正确的资料得到学习提升，故此将并将重要的AI大模型资料包括AI大模型入门学习思维导图、精品AI大模型学习书籍手册、视频教程、实战学习等录播视频免费分享出来。 这份完整版的大模型 AI 学习资料已经上传CSDN，朋友们如果需要可以微信扫描下方CSDN官方认证二维码免费领取【保证100%免费】 第一阶段（10天）：初阶应用 该阶段让大家对大模型 AI有一个最前沿的认识，对大模型 AI 的理解超过 95% 的人，可以在相关讨论时发表高级、不跟风、又接地气的见解，别人只会和 AI 聊天，而你能调教 AI，并能用代码将大模型和业务衔接。 第二阶段（30天）：高阶应用 该阶段我们正式进入大模型 AI 进阶实战学习，学会构造私有知识库，扩展 AI 的能力。快速开发一个完整的基于 agent 对话机器人。掌握功能最强的大模型开发框架，抓住最新的技术进展，适合 Python 和 JavaScript 程序员。 第三阶段（30天）：模型训练 恭喜你，如果学到这里，你基本可以找到一份大模型 AI相关的工作，自己也能训练 GPT 了！通过微调，训练自己的垂直大模型，能独立训练开源多模态大模型，掌握更多技术方案。 对全球大模型从性能、吞吐量、成本等方面有一定的认知，可以在云端和本地等多种环境下部署大模型，找到适合自己的项目/创业方向，做一名被 AI 武装的产品经理。 如果你能在15天内完成所有的任务，那你堪称天才。然而，如果你能完成 60-70% 的内容，你就已经开始具备成为一名大模型 AI 的正确特征了。 DeepSeek R1 & 大数据AI人工智能大模型 走进「DeepSeek R1 & 大数据AI人工智能大模型」技术专栏，探秘科技前沿。深度解析DeepSeek R1架构、性能亮点，结合大数据洞察，揭示其在海量数据处理中的优势。同时，聚焦AI人工智能大模型，分享原理、训练技巧与优化策略。辅以金融、医疗等多领域应用案例，助你掌握技术精髓，把握行业趋势。',
+    rawContent: null,
+    score: 0.5737984,
+    publishedDate: undefined
+  },
+  {
+    id: 5,
+    name: '多模态大模型评测基准MLLM Benchmarks综述 - 知乎 - 知乎专栏',
+    url: 'https://zhuanlan.zhihu.com/p/16894159859',
+    snippet: '多模态大模型评测基准MLLM Benchmarks综述 - 知乎 切换模式 写文章 登录/注册 多模态大模型评测基准MLLM Benchmarks综述 同屿Firmirin​ 中国科学院大学 软件工程硕士在读 本文基于两篇较新的survey，用于介绍视觉多模态大模型领域的benchmarks。 参考： https://arxiv.org/pdf/2409.18142  导读：本文将MLLM的benchmark划分为四大类：理解、推理、生成、应用，分4个章节介绍。每个大类可再细分为若干子类，每个章节先简单介绍子类分类依据，再从任务和评估指标的角度，以及输出格式的角度详细介绍代表性工作。 Understanding：是指从多模态数据中提取和整合特征以执行跨模态分析的能力，包括解释视觉表征、识别关键细节、把握语义以及准确回答相关问题等任务。评估这些功能是基础，因为它们构成了mllm跨各种任务和应用程序的更广泛功能的基础。 Reasoning：超越了基本的理解，包括执行复杂的推理和跨模态得出逻辑结论的能力。这包括需要模型处理和操作信息的任务，使它们能够解决问题并根据跨模态数据做出决策。强大的推理能力对于mlm处理需要更深层次认知处理的复杂任务至关重要。 Generation：涉及基于多模态输入创造新内容，例如从图像生成描述性文本或从文本描述生成视觉内容。这种能力对于创造性、一致性和准确性至关重要的实际应用至关重要 展开阅读全文​ 发布于 2025-01-14 18:55・IP 属地北京 多模态大模型 大模型评测 Benchmark ​赞同 1​​添加评论 ​分享 ​喜欢​收藏​申请转载',
+    rawContent: null,
+    score: 0.53590065,
+    publishedDate: undefined
+  },
+  {
+    id: 6,
+    name: '小白也能看懂 | 大模型的6个评估指标 - Csdn博客',
+    url: 'https://blog.csdn.net/zhishi0000/article/details/138373497',
+    snippet: '然而，模型的规模庞大并不总是意味着性能更好，因此我们需要一套有效的方法来评估这些大型神经网络的性能。本文将探讨为什么要评估大型神经网络模型，以及如何使用一系列关键指标来评估它们。在深度学习领域，大型神经网络模型已经成为各种应用的',
+    rawContent: null,
+    score: 0.51822984,
+    publishedDate: undefined
+  },
+  {
+    id: 7,
+    name: '【大模型理论篇】大模型能力评估、框架工具、评估指标、OpenAI Evals、大模型中文评测示例等_大模型评估-CSDN博客',
+    url: 'https://blog.csdn.net/weixin_65514978/article/details/143191743',
+    snippet: '近年来，大型语言模型（llm）在自然语言处理领域取得了重大进展，例如 gpt-3 和 chat-gpt。这些模型经过大型数据集的训练，在文本相关任务中表现出卓越的能力，甚至超越了人类。本文将简要介绍如何验证 llms 性能的评估指标。自然语言处理（nlp）是人工智能的一个领域，涉及计算机和人类语言',
+    rawContent: null,
+    score: 0.48103997,
+    publishedDate: undefined
+  },
+  {
+    id: 8,
+    name: '一文读懂大语言模型评估：方法、指标与框架全解析 - 知乎',
+    url: 'https://zhuanlan.zhihu.com/p/26098146564',
+    snippet: 'from deepeval.benchmarks import HellaSwag from deepeval.metrics import GEval print(coherence_metric.score) from deepeval.metrics import FaithfulnessMetric from deepeval.metrics import AnswerRelevancyMetric from deepeval.metrics import ContextualPrecisionMetric from deepeval.metrics import ContextualRecallMetric from deepeval.metrics import ContextualRelevancyMetric from deepeval.metrics import HallucinationMetric from deepeval.metrics import ToxicityMetric from deepeval.metrics import GEval from deepeval.metrics import GEval from deepeval.metrics import SummarizationMetric [2]代码: https://github.com/sylinrl/TruthfulQA [3]数据集: https://arxiv.org/abs/2109.07958 [5]代码: https://github.com/hendrycks/test [7]DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs: https://arxiv.org/abs/1903.00161 [9]代码: https://github.com/meetyou-ai-lab/can-mc-evaluate-llms Try ARC, the AI2 Reasoning Challenge: https://arxiv.org/abs/1803.05457 [12]代码: https://github.com/rowanz/hellaswag [13]数据集: https://huggingface.co/datasets/Rowan/hellaswag [15]代码: https://github.com/suzgunmirac/BIG-Bench-Hard [17]WinoGrande: An Adversarial Winograd Schema Challenge at Scale: https://arxiv.org/abs/1907.10641 [18]Training Verifiers to Solve Math Word Problems: https://arxiv.org/abs/2110.14168 [20]代码: https://github.com/openai/human-eval [21]数据集: https://paperswithcode.com/dataset/humaneval [23]代码: https://github.com/microsoft/CodeXGLUE [26]代码: https://github.com/lm-sys/FastChat/blob/main/docs/arena.md [28]代码: https://github.com/lm-sys/FastChat/blob/main/fastchat/llm_judge/README.md [30]Language Model Evaluation Harness: https://github.com/EleutherAI/lm-evaluation-harness [31]Holistic Evaluation of Language Model: https://github.com/stanford-crfm/helm',
+    rawContent: null,
+    score: 0.17464978,
+    publishedDate: undefined
+  }
+]
+paramsFormatter:  
+## Character
+
+You help the user to output 3 related questions, based on user's original question and the related contexts. You need identify worthwhile topics that can be follow-ups, and write questions no longer than 20 words each. Please make sure that specifics, like events, names, locations, are included in follow up questions so they can be asked standalone. For example, if the user's original question asks about "the Manhattan project", in the follow up question, do not just say "the project", but use the full name "the Manhattan project".
+
+## Contexts
+
+Here are the contexts of the question:
+
+%s
+
+## Rules
+
+- based on the user's original question and related contexts, suggest 3 such further questions.
+- DO NOT repeat user's original question.
+- DO NOT cite user's original question and Contexts.
+- DO NOT output any irrelevant content, like: 'Here are three related questions', 'Base on your original question'.
+- Each related question should be no longer than 40 tokens.
+- You must write in the same language as the user's origin question.
+
+## Output Format
+
+{{serial number}}. {{related question}}. 
+
+## Example Output
+
+### Example 1: User's question is written in English, Need to output in English.
+
+User: what is rust?
+
+Assistant:
+1. What is the history of rust? 
+2. What are the characteristics of rust? 
+3. What are the applications of rust?
+
+### Example 2: User's question is written in Chinese, 需要用中文输出.
+
+User: 什么是rust?
+
+Assistant:
+1. 在rust中什么是所有权？
+2. rust语言和c语言有什么区别？
+3. 怎么学习rust编程语言？
+
+## Original Question
+
+Here is the user's original question:
+
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node ./src/app.ts`[39m
+{"level":"info","message":"[Server is running on port]: 3000"}
