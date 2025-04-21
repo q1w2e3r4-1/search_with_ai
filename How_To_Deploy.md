@@ -2,7 +2,7 @@
 
 ## A. Docker部署
 
-这个相对比较简单，照着readme.md就能配好，所有用到的文件均在deploy目录下，你需要填写**.env.example**中的部分内容，并将其命名为**.env.docker**. 
+这个相对比较简单，照着readme.md就能配好，所有用到的文件均在deploy目录下，你需要填写`.env.example` 中的部分内容，并将其命名为`.env.docker`. 
 
 需要注意的是，这种方法用的是官方提供的容器，**无法修改源码**！！！若要修改源码，只能采用本地部署：
 
@@ -10,7 +10,7 @@
 
 项目源码均在apps下，server和web分别表示前后端，**所有的环境变量都需配置在server文件夹下**。
 
-在apps/server目录下有一个**.env.example**, 你需填写部分内容(填写方法见readme.md), 然后复制两份，分别命名为**.env和.env.local**(没有深究哪个文件真正起作用，索性两个都加上)
+在apps/server目录下有一个`.env.example`, 你需填写部分内容(填写方法见readme.md), 然后复制两份，分别命名为`.env`和`.env.local`(没有深究哪个文件真正起作用，索性两个都加上)
 
 下一步是安装yarn(指定版本)和turbo,你可以自行搜索教程，这里给出我当时与大模型的对话：
 
@@ -103,7 +103,7 @@ docker compose up -d searxng
 
 在apps/server/src/model.json中，你可以清楚的看到每个url(LLM提供者)注册的模型名称，只要你在这里添加，重启服务应该就能看到。
 
-tips: 对于Ollama, 你可以访问这个链接http://localhost:11434/api/tags以获取Ollama上已下载的模型
+tips: 对于Ollama, 你可以访问这个链接http://localhost:11434/api/tags ,以获取Ollama上已下载的模型
 
 ### 3. 搜索引擎比较
 

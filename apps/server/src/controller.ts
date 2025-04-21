@@ -15,6 +15,8 @@ const CACHE_ENABLED = process.env.CACHE_ENABLE;
 const models = Models as IProviderModel[];
 
 export const searchController = async (ctx: Context) => {
+  console.log("got ctx:", ctx)
+
   const q = ctx.request.query.q || DefaultQuery;
   const reload: boolean = ctx.request.body.reload ?? false;
   // search engine
@@ -22,6 +24,8 @@ export const searchController = async (ctx: Context) => {
   const categories: ESearXNGCategory[] = ctx.request.body.categories ?? [];
   const mode: TSearchMode = ctx.request.body.mode ?? 'simple';
   const language: string = ctx.request.body.language || 'all';
+  // console.log("body:", ctx.request.body);
+  // console.log(q, engine);
   // llm provider
   const provider: Provider = ctx.request.body.provider;
   const model: string = ctx.request.body.model;

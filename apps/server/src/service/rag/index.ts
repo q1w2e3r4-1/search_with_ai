@@ -49,10 +49,10 @@ export class Rag {
 
     // Parameters supported by searxng: categories.
     const contexts = await this.search(searchQuery, categories, language);
-    console.log("size of result in search(): ", contexts.length);
+    // console.log("size of result in search(): ", contexts.length);
     const REFERENCE_COUNT = process.env.REFERENCE_COUNT || 8;
     let limitContexts = contexts.slice(0, +REFERENCE_COUNT);
-    console.log("got limitContexts: ", limitContexts);
+    // console.log("got limitContexts: ", limitContexts);
 
     if (mode === 'research') {
       const fullContexts = await this.getFullSearchResult(limitContexts);
@@ -78,7 +78,7 @@ export class Rag {
     }
 
     if (!this.stream) {
-      console.log("this.stream = false????")
+      // console.log("this.stream = false????")
       const relatedPromise = this.getRelatedQuestions(query, limitContexts);
       const answerPromise = this.getAiAnswer(query, contexts);
       const [related, answer] = await Promise.all([relatedPromise, answerPromise]);
@@ -113,7 +113,7 @@ export class Rag {
   private async getFullSearchResult(results: ISearchResponseResult[]) {
     const urls = results.map(item => item.url);
     const fullContexts = await jinaUrlsReader({ urls });
-    console.log("get fullContexts in getFullSearchResult: ", fullContexts);
+    // console.log("get fullContexts in getFullSearchResult: ", fullContexts);
     return fullContexts;
   }
 
@@ -138,7 +138,7 @@ export class Rag {
     const { model, stream } = this;
     try {
       const { messages } = this.paramsFormatter(query, mode, contexts, 'answer');
-      console.log("messages: ", messages);
+      // console.log("messages: ", messages);
       if (!stream) {
         const res = await this.chat({ messages, model });
         return res;
@@ -150,7 +150,7 @@ export class Rag {
         if(msg && msg.content) msg.content = msg.content.replace(/【/g, '[').replace(/】/g, ']');
         if(msg) fullOutput += msg.content;
       });
-      console.log("LLM output: ", fullOutput);
+      // console.log("LLM output: ", fullOutput);
     } catch (err: any) {
       console.error('[LLM Error]:', err);
       const msg = {
@@ -193,7 +193,7 @@ export class Rag {
     const context = contexts.map(
       (item, index) => `[[citation:${index + 1}]] ${item.content || item.snippet}`
     ).join('\n\n');
-    console.log("contexts are:", contexts);
+    // console.log("contexts are:", contexts);
 
     let prompt = MoreQuestionsPrompt;
 
@@ -213,7 +213,7 @@ export class Rag {
       }
     }
 
-    console.log("paramsFormatter: ", prompt)
+    // console.log("paramsFormatter: ", prompt)
     const system = util.format(prompt, context);
     const messages: IChatInputMessage[] = [
       {
